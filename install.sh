@@ -28,6 +28,26 @@ cd ~
 
 rm -rf /tmp/proxy-switch
 
+
+# Download
+curl -LO https://github.com/saladday/cc-switch-cli/releases/latest/download/cc-switch-cli-v4.1.2-linux-x64-musl.tar.gz /tmp/cc-switch-cli.tar.gz
+
+cd /tmp
+# Extract
+tar -xzf cc-switch-cli.tar.gz
+
+# Add execute permission
+chmod +x cc-switch
+
+# Move to PATH
+mv cc-switch ~/.local/bin/
+
+cd ~
+
+rm -rf /tmp/cc-switch-cli.tar.gz /tmp/cc-switch
+
+echo "alias csps='cc-switch provider switch'" >> ~/.bashrc
+
 source ~/.bashrc
 
 
