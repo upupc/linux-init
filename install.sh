@@ -30,11 +30,6 @@ cd ~
 
 rm -rf /tmp/proxy-switch
 
-# 添加 proxy-switch 命令补全（避免重复写入）
-if ! grep -qF "source ~/.local/completions/_proxy-switch" ~/.bashrc; then
-    echo "source ~/.local/completions/_proxy-switch" >> ~/.bashrc
-fi
-
 # Download
 curl -L -o /tmp/cc-switch-cli.tar.gz https://github.com/saladday/cc-switch-cli/releases/latest/download/cc-switch-cli-v4.1.2-linux-x64-musl.tar.gz
 
@@ -61,5 +56,9 @@ source ~/.bashrc
 
 nvm install 24
 
+# 添加 proxy-switch 命令补全（避免重复写入）
+if ! grep -qF "source ~/.local/completions/_proxy-switch" ~/.bashrc; then
+    echo "source ~/.local/completions/_proxy-switch" >> ~/.bashrc
+fi
 
 
