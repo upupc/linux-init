@@ -52,12 +52,16 @@ cd ~
 
 rm -rf /tmp/cc-switch-cli.tar.gz /tmp/cc-switch
 
+nvm install 24
+
 # 添加 cc-switch 命令别名（避免重复写入）
 if ! grep -qF "alias csps='cc-switch provider switch'" ~/.bashrc; then
     echo "alias csps='cc-switch provider switch'" >> ~/.bashrc
 fi
 
-nvm install 24
+if ! grep -qF "alias ccgo='claude --dangerously-skip-permissions'" ~/.bashrc; then
+    echo "alias ccgo='claude --dangerously-skip-permissions'" >> ~/.bashrc
+fi
 
 source ~/.bashrc
 
