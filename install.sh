@@ -16,11 +16,11 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 mkdir -p ~/.local/bin
 
-echo "source ~/.local/completions/_proxy-switch" >> ~/.bashrc
-
 git clone https://github.com/upupc/proxy-switch.git /tmp/proxy-switch
 
 cd /tmp/proxy-switch
+
+chmod +x ./install.sh ./bin/proxy-switch ./completions/_proxy-switch
 
 ./install.sh
 
@@ -28,6 +28,7 @@ cd ~
 
 rm -rf /tmp/proxy-switch
 
+echo "source ~/.local/completions/_proxy-switch" >> ~/.bashrc
 
 # Download
 curl -L -o /tmp/cc-switch-cli.tar.gz https://github.com/saladday/cc-switch-cli/releases/latest/download/cc-switch-cli-v4.1.2-linux-x64-musl.tar.gz
