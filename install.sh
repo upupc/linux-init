@@ -54,6 +54,10 @@ rm -rf /tmp/cc-switch-cli.tar.gz /tmp/cc-switch
 
 nvm install 24
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+source $HOME/.cargo/env
+
 # 添加 cc-switch 命令别名（避免重复写入）
 if ! grep -qF "alias csps='cc-switch provider switch'" ~/.bashrc; then
     echo "alias csps='cc-switch provider switch'" >> ~/.bashrc
