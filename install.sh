@@ -28,5 +28,7 @@ cd ~
 
 rm -rf /tmp/proxy-switch
 
+source ~/.bashrc
+
 
 
