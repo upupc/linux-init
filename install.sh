@@ -2,15 +2,17 @@
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+curl -L -o /tmp/Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 
-bash Miniforge3-$(uname)-$(uname -m).sh
+bash /tmp/Miniforge3.sh
 
 source ~/.bashrc
 
 conda init
 
 source ~/.bashrc
+
+rm -rf /tmp/Miniforge3.sh
 
 curl -fsSL https://claude.ai/install.sh | bash
 
