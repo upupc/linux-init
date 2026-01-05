@@ -6,7 +6,11 @@ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mi
 
 bash Miniforge3-$(uname)-$(uname -m).sh
 
+source ~/.bashrc
+
 conda init
+
+source ~/.bashrc
 
 curl -fsSL https://claude.ai/install.sh | bash
 
