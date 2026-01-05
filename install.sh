@@ -4,7 +4,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 curl -L -o /tmp/Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 
-bash /tmp/Miniforge3.sh
+# 安装 Miniforge3（如果已存在则更新）
+if [ -d "/root/miniforge3" ]; then
+    bash /tmp/Miniforge3.sh -u
+else
+    bash /tmp/Miniforge3.sh
+fi
 
 source ~/.bashrc
 
