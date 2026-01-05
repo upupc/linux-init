@@ -57,9 +57,9 @@ if ! grep -qF "alias csps='cc-switch provider switch'" ~/.bashrc; then
     echo "alias csps='cc-switch provider switch'" >> ~/.bashrc
 fi
 
-source ~/.bashrc
-
 nvm install 24
+
+source ~/.bashrc
 
 # 添加 proxy-switch 命令补全（避免重复写入）
 if ! grep -qF "source ~/.local/completions/_proxy-switch" ~/.bashrc; then
