@@ -30,7 +30,7 @@ rm -rf /tmp/proxy-switch
 
 
 # Download
-curl -LO https://github.com/saladday/cc-switch-cli/releases/latest/download/cc-switch-cli-v4.1.2-linux-x64-musl.tar.gz /tmp/cc-switch-cli.tar.gz
+curl -L -o /tmp/cc-switch-cli.tar.gz https://github.com/saladday/cc-switch-cli/releases/latest/download/cc-switch-cli-v4.1.2-linux-x64-musl.tar.gz
 
 cd /tmp
 # Extract
